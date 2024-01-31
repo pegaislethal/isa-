@@ -1,0 +1,277 @@
+/*
+Name - Rohit Ghimire 
+    StudentID - 2408291
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    background-repeat: no-repeat; 
+}
+body{
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: fit-content;
+   
+
+}
+.background{
+    background-image: url(./images/background.png);
+    position:sticky;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+
+}
+#timezone{
+    color: white;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: right;
+    padding-right: 230px;
+}
+.container{
+    width: 100%;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin:50px auto;
+    height: 490px;
+    border-radius: 20px;
+    margin-right: 200px;
+}
+.weather{
+    color: white;
+    width: 100%;
+    max-width: 700px;
+    /* background-color: rgba(0, 0, 0, 0.5) ; */
+    margin-top: 0px;
+    margin-left: 125px;
+
+}
+.weather-details{
+    /* background-color: rgba(0, 0, 0, 0.5) ; */
+    max-width: 600px;
+    width:100%;
+    margin-left: 50px;
+    padding-top: 14px;
+}
+.temprature-logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+}
+.city-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.temprature-logo img{
+    height:60px;
+    padding-left: 30px;
+    border-left:2px solid white;
+    margin-left:25px;
+}
+
+/* this is for search bar  */
+
+.search_box{
+    display: flex;
+    justify-content: center  ;
+    align-items: center;
+    margin-top:35px;
+}
+.search_box input{
+    height: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 350px;
+   
+  }
+button{
+    position: relative;
+    right: 60px;
+    background-color:skyblue;
+    color:black;
+    padding:8px ;
+    border: 1px solid ;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 10;
+    
+} 
+button:hover{
+    color:white;
+    background-color:cadetblue;
+}
+/* search bar ended */
+/* start of extra detials */
+.sub-container{
+    background-color:  rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    color: white;
+    margin-left: 225px;
+    margin-top: 50px;
+    border-radius: 10px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sub-container img{
+    height:30px;
+}
+.extra-details{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+.wind-border , .pressure-border {
+    border-left: 1px solid white;
+}
+#weather-type{
+    text-transform: capitalize;
+}
+#show-more{
+    color: wheat;
+    font-size: large;
+    margin-left: 55%;
+}
+#show-more a{
+    text-decoration: none;
+    color: #000;
+
+}
+.foot{
+    background-color:rgb(0, 0, 0);
+    position: fixed;
+    color: beige;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.week{
+    background-size: cover;
+    width: 90%;
+    margin: 100px auto 10%;
+    text-align: center;
+    padding: 35px 35px;
+    border-radius: 22px;  
+    margin-top: 35px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.weather-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 180px ;
+}
+.temperature-box {
+    width: 280px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#icon0{
+    width: 30px;
+}
+#icon1{
+    width: 30px;
+}#icon2{
+    width: 30px;
+}#icon3{
+    width: 30px;
+}#icon4{
+    width: 30px;
+}#icon5{
+    width: 30px;
+}#icon6{
+    width: 30px;
+}
+#icon7{
+    width: 30px;
+}
+.temperature-value0{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: 100px;
+    height: 800px;
+}
+.temperature-value1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: 100px;
+    height: 800px;
+}
+.temperature-value2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: 100px;
+    height: 800px;
+}
+.temperature-value3{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: 100px;
+    height: 800px;
+}
+.temperature-value4{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: 100px;
+    height: 800px;
+}
+.temperature-value5{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: 100px;
+    height: 800px;
+}
+.temperature-value6{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: 100px;
+    height: 800px;
+}
+
+
+.temperature-day {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.temperature-date {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.additional-info {
+    font-size: 14px;
+}
