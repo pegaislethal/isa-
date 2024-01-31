@@ -13,7 +13,7 @@ const humid = document.querySelector(".humidity");
 async function checkWeather(city){
     try{
     // const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?&appid=3b5fc269d8d40df008cadde92801c72a&units=metric&q=${city}`);
-    const response = await fetch(`http://localhost/dummy/main.php?city=${city}`);
+    const response = await fetch(`http://localhost/weather/Rohit_Ghimire_2408291.php?city=${city}`);
     
     var data = await response.json();
     console.log("Data",data);
@@ -53,20 +53,20 @@ async function checkWeather(city){
     weatInfoElem.textContent= ","+data[data_length-1].Description;
     }
     catch(err){
-        // alert("No city found")
-        // const timeZone = document.querySelector("#timezone");
-        // timeZone.textContent="--";
-        // cityName.innerHTML = "--";
-        // tempElem.textContent = "--"
-        // weatInfoElem.textContent = "--";
-        // humid.textContent = "--%"
-        // pressureElem.textContent = "-- hPa"
-        // spedElem.textContent = "-- m/s"
+        alert("No city found")
+        const timeZone = document.querySelector("#timezone");
+        timeZone.textContent="--";
+        cityName.innerHTML = "--";
+        tempElem.textContent = "--"
+        weatInfoElem.textContent = "--";
+        humid.textContent = "--%"
+        pressureElem.textContent = "-- hPa"
+        spedElem.textContent = "-- m/s"
     }
 }
 
 async function php_show(city) {
-    const response = await fetch(`http://localhost/dummy/main.php?city=${city}`);
+    const response = await fetch(`http://localhost/weather/Rohit_Ghimire_2408291.php?city=${city}`);
     var data = await response.json();
     console.log("Data",data);    
     data_length = data.length;
@@ -83,11 +83,12 @@ async function php_show(city) {
     }
 
     for (let i = 0; i <=6; i++) {
-        document.querySelector(`#temperature-value${i}`).textContent = Math.round(data[data_length-i-1].Temperature) +"C";
+        document.querySelector(`#temperature-value${i}`).textContent = Math.round(data[data_length-i-1].Temperature) +" °C";
         document.querySelector(`#day${i}`).textContent = data[data_length-i-1].Days;
-        document.querySelector(`#humidity${i}`).textContent = data[data_length-i-1].Humidity+"%";
-        document.querySelector(`#wind${i}`).textContent = data[data_length-i-1].Wind + "m/s";
-        document.querySelector(`#pressure${i}`).textContent = data[data_length-i-1].Pressure +"hPa";
+        document.querySelector(`#date${i}`).textContent = data[data_length-i-1].Date;
+        document.querySelector(`#humidity${i}`).textContent = "Humidity- "+data[data_length-i-1].Humidity+ "%";
+        document.querySelector(`#wind${i}`).textContent ="Wind Speed-" + data[data_length-i-1].Wind +  "m/s";
+        document.querySelector(`#pressure${i}`).textContent = "Pressure- " +data[data_length-i-1].Pressure + "hPa";
         document.querySelector(`#icon${i}`).src = "https://github.com/pegaislethal/icon-link/blob/main/"+data[data_length-i-1].Icon+".png?raw=true";
         document.querySelector(`#country${i}`).textContent= data[data_length-1].City;
 
@@ -95,9 +96,6 @@ async function php_show(city) {
     
 }
 
-
-php_show('haridwar')
-checkWeather("Haridwar")
 
 
 SearchBtn.addEventListener('click',()=>{
@@ -114,3 +112,7 @@ searchBox.addEventListener('keyup',(event)=>{
         
     }
 )
+
+php_show('haridwar')
+checkWeather("Haridwar")
+

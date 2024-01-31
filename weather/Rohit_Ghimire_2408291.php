@@ -118,9 +118,9 @@ function api_fetch($conn,$cityName){
             echo "<br>Update failed";
         }
     }
-    if ($conn->query($sql) === FALSE){
-        echo "<br> insertion failed";
-    }        
+    // if ($conn->query($sql) === FALSE){
+    //     echo "<br> insertion failed";
+    // }        
 }
 
 function api_json($conn,$cityName){

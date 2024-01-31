@@ -148,14 +148,7 @@ button:hover{
     color: #000;
 
 }
-.foot{
-    background-color:rgb(0, 0, 0);
-    position: fixed;
-    color: beige;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
+
 
 .week{
     background-size: cover;
@@ -171,13 +164,15 @@ button:hover{
     
 }
 .weather-container {
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    height: fit-content;
     justify-content: space-between;
-    max-width: 800px;
-    margin: 180px ;
+    max-width: 1100px;
+    margin-right: 00px;
 }
 .temperature-box {
-    width: 280px;
+    width: 500px;
     height: 200px;
     background-color: #e0e0e0;
     border-radius: 8px;
@@ -185,10 +180,9 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px 12px;
     padding: 10px;
-    margin-right: 20px;
-    text-align: center;
-    box-sizing: border-box;
+    
 }
 
 #icon0{
@@ -210,54 +204,12 @@ button:hover{
 #icon7{
     width: 30px;
 }
-.temperature-value0{
+.temperature-value{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 4px;
-    width: 100px;
-    height: 800px;
-}
-.temperature-value1{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    width: 100px;
-    height: 800px;
-}
-.temperature-value2{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    width: 100px;
-    height: 800px;
-}
-.temperature-value3{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    width: 100px;
-    height: 800px;
-}
-.temperature-value4{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    width: 100px;
-    height: 800px;
-}
-.temperature-value5{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    width: 100px;
-    height: 800px;
-}
-.temperature-value6{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    width: 100px;
-    height: 800px;
+    width: 110px;
+    height: 900px;
 }
 
 
@@ -274,4 +226,13 @@ button:hover{
 
 .additional-info {
     font-size: 14px;
+}
+.foot{
+    background-color:rgb(0, 0, 0);
+    position: fixed;
+    color: beige;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
